@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import isFunction from "../utils/isFunction";
+import { isFunction } from "../utils";
 const useMount = (fn: () => void) => {
   if (!isFunction(fn)) console.error("useMount的参数需要是一个函数");
   useEffect(() => {
