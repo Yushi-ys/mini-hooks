@@ -3,7 +3,7 @@ import { isFunction } from "../utils";
 
 type obj = Record<string, any>;
 type SetState<S extends obj> = <K extends keyof S>(
-  state: Pick<S, K> | null | ((prevState: Readonly<S>) => Pick<S, K> | S | null)
+  state: Pick<S, K> | ((prevState: Readonly<S>) => Pick<S, K>)
 ) => void;
 
 const useSetState = <S extends obj>(
